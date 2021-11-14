@@ -10,8 +10,19 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "cookieparser": "^0.1.0",
     "core-js": "^3.15.1",
+    "firebase": "8.7.1",
+    "firebase-admin": "^10.0.0",
+    "firebase-tools": "^9.22.0",
+    "fs": "^0.0.1-security",
+    "jwt-decode": "^3.1.2",
+    "net": "^1.0.2",
     "nuxt": "^2.15.7",
+    "tls": "^0.0.1",
+    "universal-cookie": "^4.0.4",
+    "vee-validate": "^3.4.14",
+    "vue2-google-maps": "^0.10.7",
     "vuetify": "^2.5.5"
   },
   "devDependencies": {
