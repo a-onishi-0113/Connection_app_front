@@ -1,0 +1,30 @@
+setup:
+  config:
+    NODE_ENV: production
+    NPM_CONFIG_PRODUCTION: false
+build:
+  docker:
+    web: Dockerfile
+  config:
+    WORKDIR: app
+    API_URL: "https://connections-v1-api.herokuapp.com"
+    CONTAINER_PORT: 3000
+    API_PORT: 3000
+    FRONT_PORT: 8080
+    API_KEY: AIzaSyDqkwiG9dfcgZ-wEOlmmZMKaxNYm4z8AfU
+    AUTH_DOMAIN: sample-todo-d266e.firebaseapp.com
+    PROJECT_ID: sample-todo-d266e
+    APP_ID: 1:954956317525:web:324dc65dba6372f75325dc
+    STORAGE_BUCKET: sample-todo-d266e.appspot.com
+    MESSAGE_SENDER_ID: 954956317525
+    AWS_ACCESS_KEY_ID: AKIAWHUJCLO6TRBRGYH4
+    AWS_SECRET_ACCESS_KEY: dBcDb6yKmrrOrEeNqgjYRLdmhh+4iKq1YCmRrFUF
+    S3_REGION: ap-northeast-1
+    S3_BUCKET: hogefuga0113
+    GM_API_KEY: AIzaSyBIRcMXyWgREY9md8wntjm9yaDvJGvTx9U
+    GUEST_EMAIL: guest@example.com
+    GUEST_UID: sePWNn0oRBd2iBKDfoE3StoU8H82
+    GUEST_PASS: password
+
+run:
+  web: yarn run start
