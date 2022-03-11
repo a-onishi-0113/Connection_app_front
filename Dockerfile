@@ -1,5 +1,6 @@
 FROM node:14.4.0-alpine
 
+# 省略した書き方。Herokuの場合適用されない
 # ARG WORKDIR \
 #     CONTAINER_PORT \
 #     API_URL \

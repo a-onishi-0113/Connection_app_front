@@ -81,6 +81,7 @@
           </v-col>
         </v-row>
     <input @change="onFileChange" type="file">
+    <p>画像は必須です！</p>
     <v-btn @click='console()'>console</v-btn>
     <v-btn @click='post()'>投稿</v-btn>
   </div>
@@ -239,6 +240,7 @@ export default {
     },
     async post() {
         if (this.content != null) {
+          if (this.images.length != 0) {
           var formData = new FormData()
           for (var i = 0; i < this.images.length; i++) {
             formData.append('images[]', this.images[i].uploadFile)
@@ -274,10 +276,30 @@ export default {
               console.log(this.err)
             })
         }else {
-          alert('投稿内容がありません。')
+          // alert('画像は必須です！')
+          this.flash(
+        {
+          message: "画像は必須です！",
+          type: "sucess",
+          status: true,
+        },
+          { root: true } // 他のvuexモジュールから呼び出すときにつける
+      )
+        }
+        }else {
+          // alert('投稿内容がありません。')
+          this.flash(
+        {
+          message: "投稿内容がありません。",
+          type: "sucess",
+          status: true,
+        },
+          { root: true } // 他のvuexモジュールから呼び出すときにつける
+      )
         }
     },
     console() {
+      console.log(this.images)
       console.log(this.address)
       console.log(this.formatted_address)
     }
